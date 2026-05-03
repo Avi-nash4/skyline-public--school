@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admissions - Skyline Public School</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+:root{
+    --blue:#0b2559;
+    --yellow:#ffc107;
+}
+
+/* Body */
+body{
+    background:#f4f7fb;
+    color:#333;
+}
+
+/* Navbar */
+.navbar{
+    background:var(--blue);
+    color:#fff;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.navbar a{
+    color:#fff;
+    margin-left:20px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.navbar a:hover{
+    color:var(--yellow);
+}
+
+/* Header */
+.header{
+    background:var(--blue);
+    color:#fff;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.header h1{
+    font-size:3rem;
+}
+
+.header span{
+    color:var(--yellow);
+}
+
+/* Section Wrapper */
+.section-bg{
+    background:#eef3ff;
+    padding:40px 10%;
+    margin:30px auto;
+    border-radius:10px;
+}
+
+/* Section Title */
+.section-title{
+    text-align:center;
+    margin-bottom:30px;
+    color:var(--blue);
+    font-size:2rem;
+}
+
+/* Steps */
+.steps{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+/* Cards */
+.step{
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    width:250px;
+    text-align:center;
+    box-shadow:0 6px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+    border-top:5px solid var(--blue);
+}
+
+.step:hover{
+    transform:translateY(-6px);
+}
+
+.step h3{
+    color:var(--blue);
+    margin-bottom:10px;
+}
+
+.step p{
+    font-size:0.95rem;
+    line-height:1.5;
+}
+
+.step b{
+    color:#e63946;
+}
+
+/* Footer */
+.footer{
+    background:var(--blue);
+    color:#fff;
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .steps{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+<h2>Skyline Public School</h2>
+<div>
+<a href="index.html">Home</a>
+<a href="academics.html">Academics</a>
+<a href="admissions.html">Admissions</a>
+<a href="contact.html">Contact</a>
+<a href="apply.html" target="_blank" class="btn-apply">Apply Now</a>
+</div>
+</div>
+
+<!-- Header -->
+<div class="header">
+<h1><span>Admissions</span> Open</h1>
+<p>Join Skyline Public School and shape your future</p>
+</div>
+
+<!-- Admission Criteria -->
+<div class="section-bg">
+<h2 class="section-title">Admission Criteria</h2>
+
+<div class="steps">
+    <div class="step">
+        <h3>Science</h3>
+        <p>Minimum <b>70%</b> marks in Class 10 required.</p>
+    </div>
+
+    <div class="step">
+        <h3>Commerce</h3>
+        <p>Minimum <b>65%</b> marks in Class 10 required.</p>
+    </div>
+
+    <div class="step">
+        <h3>Arts</h3>
+        <p>Minimum <b>60%</b> marks in Class 10 required.</p>
+    </div>
+</div>
+</div>
+
+<!-- Scholarship -->
+<div class="section-bg">
+<h2 class="section-title">Scholarship Benefits</h2>
+
+<div class="steps">
+    <div class="step">
+        <h3>Above 85%</h3>
+        <p>Students scoring above <b>85%</b> will get <b>15% OFF</b> on admission fees.</p>
+    </div>
+
+    <div class="step">
+        <h3>Merit Support</h3>
+        <p>Special recognition and academic support for high-performing students.</p>
+    </div>
+</div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+© 2026 Skyline Public School
+</div>
+
+</body>
+</html>

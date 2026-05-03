@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply Now - Skyline Public School</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+:root{
+    --blue:#0b2559;
+    --yellow:#ffc107;
+}
+
+/* Body */
+body{
+    background:#f4f7fb;
+    color:#333;
+}
+
+/* Navbar */
+.navbar{
+    background:var(--blue);
+    color:#fff;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.navbar a{
+    color:#fff;
+    margin-left:20px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.navbar a:hover{
+    color:var(--yellow);
+}
+
+/* Apply Section */
+.apply-section{
+    padding:60px 10%;
+}
+
+/* Title */
+.apply-title{
+    text-align:center;
+    color:var(--blue);
+    font-size:2rem;
+    margin-bottom:30px;
+}
+
+/* Form Box */
+.form-box{
+    max-width:500px;
+    margin:auto;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Inputs */
+.form-box input,
+.form-box select{
+    width:100%;
+    padding:12px;
+    margin:12px 0;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:0.95rem;
+}
+
+/* Focus */
+.form-box input:focus,
+.form-box select:focus{
+    border-color:var(--blue);
+    outline:none;
+    box-shadow:0 0 5px rgba(11,37,89,0.2);
+}
+
+/* Button */
+.form-box button{
+    width:100%;
+    padding:12px;
+    background:var(--blue);
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    font-size:1rem;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.form-box button:hover{
+    background:#081d45;
+}
+
+/* Footer */
+.footer{
+    background:var(--blue);
+    color:#fff;
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .form-box{
+        padding:20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+<h2>Skyline Public School</h2>
+<div>
+<a href="index.html">Home</a>
+<a href="academics.html">Academics</a>
+<a href="admissions.html">Admissions</a>
+<a href="contact.html">Contact</a>
+<a href="apply.html" target="_blank" class="btn-apply">Apply Now</a>
+</div>
+</div>
+
+<!-- Apply Section -->
+<section class="apply-section">
+<h2 class="apply-title">Apply Now</h2>
+
+<div class="form-box">
+<form onsubmit="submitForm(event)">
+
+<input type="text" placeholder="Student Name" required>
+<input type="text" placeholder="Parent Name" required>
+<input type="email" placeholder="Email Address" required>
+<input type="tel" placeholder="Mobile Number" required>
+
+<select required>
+<option value="">Select Class</option>
+<option>Class 1-4</option>
+<option>Class 5-8</option>
+<option>Class 11-12</option>
+</select>
+
+<button type="submit">Submit Application</button>
+
+</form>
+</div>
+</section>
+
+<!-- Footer -->
+<div class="footer">
+© 2026 Skyline Public School
+</div>
+
+<script>
+function submitForm(e){
+    e.preventDefault();
+    alert("Application Submitted Successfully!");
+}
+</script>
+
+</body>
+</html>

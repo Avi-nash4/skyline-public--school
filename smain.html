@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skyline Public School</title>
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', sans-serif; }
+
+:root {
+    --primary-blue:#0b2559;
+    --accent-yellow:#ffc107;
+    --text-dark:#333;
+    --text-light:#fff;
+    --bg-light:#f8f9fa;
+}
+
+body { color:var(--text-dark); }
+.container { width:90%; max-width:1200px; margin:auto; }
+
+/* Top Bar */
+.top-bar { background:#081d45; color:#fff; padding:8px 0; font-size:0.85rem; }
+.top-bar .container { display:flex; justify-content:space-between; }
+
+/* Navbar */
+.navbar { background:var(--primary-blue); color:#fff; padding:15px 0; }
+.navbar .container { display:flex; justify-content:space-between; align-items:center; }
+
+.nav-brand { font-size:1.5rem; font-weight:bold; color:var(--accent-yellow); }
+
+.nav-links { display:flex; gap:20px; align-items:center; }
+.nav-links a { color:#fff; font-weight:600; }
+.nav-links a:hover { color:var(--accent-yellow); }
+
+.btn-apply {
+    background:#00a8ff;
+    color:#fff;
+    padding:8px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.hamburger {
+    display:none;
+    font-size:1.5rem;
+    background:none;
+    border:none;
+    color:#fff;
+}
+
+/* Hero */
+.hero { background:var(--primary-blue); color:#fff; padding:80px 0; }
+.hero .container { display:flex; justify-content:space-between; align-items:center; }
+
+.hero-content { max-width:50%; }
+.hero h1 { font-size:3.5rem; }
+.hero span { color:var(--accent-yellow); }
+
+.btn-enroll {
+    margin-top:20px;
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:var(--accent-yellow);
+    cursor:pointer;
+}
+
+/* Streams */
+.streams { padding:60px 0; background:var(--bg-light); text-align:center; }
+.stream-cards { display:flex; gap:30px; justify-content:center; }
+
+.card {
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    width:250px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .hamburger{display:block;}
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:60px;
+        left:0;
+        width:100%;
+        background:var(--primary-blue);
+    }
+    .nav-links.active{display:flex;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-bar">
+    <div class="container">
+        <span>Email: info@skylinepublic.edu</span>
+        <span>Parent Portal</span>
+    </div>
+</div>
+
+<!-- ✅ FIXED NAVBAR -->
+<nav class="navbar">
+    <div class="container">
+        <div class="nav-brand">Skyline Public School</div>
+
+        <button class="hamburger" id="menu-btn">☰</button>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" target="_blank" rel="noopener noreferrer">Home</a></li>
+            <li><a href="about.html" target="_blank" rel="noopener noreferrer">About</a></li>
+            <li><a href="academics.html" target="_blank" rel="noopener noreferrer">Academics</a></li>
+            <li><a href="admissions.html" target="_blank" rel="noopener noreferrer">Admissions</a></li>
+            <li><a href="contact.html" target="_blank" rel="noopener noreferrer">Contact</a></li>
+            <li><button class="btn-apply js-alert-btn">Apply Now</button></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Shape Your <br><span>Future Here</span></h1>
+            <button class="btn-enroll js-alert-btn">Enroll Today</button>
+        </div>
+    </div>
+</section>
+
+<section class="streams">
+    <h2>Our Academic Streams</h2>
+    <div class="stream-cards">
+        <div class="card">Science</div>
+        <div class="card">Commerce</div>
+        <div class="card">Humanities</div>
+    </div>
+</section>
+
+<script>
+// Mobile menu
+const btn = document.getElementById('menu-btn');
+const nav = document.getElementById('nav-links');
+
+btn.onclick = () => {
+    nav.classList.toggle('active');
+    btn.textContent = nav.classList.contains('active') ? '✕' : '☰';
+};
+
+// Alert buttons
+document.querySelectorAll('.js-alert-btn').forEach(btn=>{
+    btn.onclick = () => alert("Admissions opening soon!");
+});
+</script>
+
+</body>
+</html>
